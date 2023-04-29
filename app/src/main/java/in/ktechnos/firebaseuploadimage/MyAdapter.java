@@ -30,7 +30,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(context).load(dataList.get(position).getImageURL()).into(holder.recyclerImage);
-        holder.recyclerCaption.setText(dataList.get(position).getCaption());
+        holder.recyclerCaption.setText(dataList.get(position).getImageURL());
+        //holder.recyclerCaption.setText(dataList.get(position).getCaption());
     }
     @Override
     public int getItemCount() {
